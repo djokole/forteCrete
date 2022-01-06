@@ -1,0 +1,151 @@
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Thin.ttf);
+	font-weight: 100;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Light.ttf);
+	font-weight: 200;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Regular.ttf);
+	font-weight: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Medium.ttf);
+	font-weight: 500;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Bold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/Roboto-Black.ttf);
+	font-weight: 900;
+}
+
+body{
+	font-family: Roboto;
+	margin: 0px;
+	background-color: black;
+}
+#fc-box ,
+#fc-box .g-artboard {
+	margin:0 auto;
+}
+#fc-box p {
+	margin:0;
+}
+#fc-box .g-aiAbs {
+	position:absolute;
+}
+#fc-box .g-aiImg {
+	position:absolute;
+	top:0;
+	display:block;
+	width:100% !important;
+}
+#fc-box .g-aiSymbol {
+	position: absolute;
+	box-sizing: border-box;
+}
+#fc-box .g-aiPointText p { white-space: nowrap; }
+#fc-Artboard_1 {
+	position:relative;
+	overflow:hidden;
+}
+#fc-Artboard_1 p {
+	font-weight:700;
+	line-height:91px;
+	height:auto;
+	filter:alpha(opacity=100);
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity:1;
+	letter-spacing:0em;
+	font-size:76px;
+	text-align:left;
+	color:rgb(255,255,255);
+	text-transform:none;
+	padding-bottom:0;
+	padding-top:0;
+	mix-blend-mode:normal;
+	font-style:normal;
+	position:static;
+}
+#fc-Artboard_1 .g-pstyle0 {
+	font-weight:200;
+	line-height:24px;
+	height:24px;
+	letter-spacing:0.049em;
+	font-size:1.3vw;
+}
+#fc-Artboard_1 .g-pstyle1 {
+	font-weight:200;
+	line-height:24px;
+	height:24px;
+	letter-spacing:0.05em;
+	font-size:1.3vw;
+}
+#fc-Artboard_1 .g-pstyle2 {
+	font-weight:200;
+	line-height:24px;
+	height:24px;
+	letter-spacing:0.035em;
+	font-size:1.3vw;
+}
+#fc-Artboard_1 .g-pstyle3 {
+	font-weight:100;
+	line-height:132px;
+	height:132px;
+	font-size:7.3vw;
+}
+#fc-Artboard_1 .g-pstyle4 {
+	font-weight:900;
+	line-height:246px;
+	height:246px;
+	font-size:13.6vw;
+}
+#fc-Artboard_1 .g-pstyle5 {
+	height:91px;
+	font-size: 5vw;
+}
+#fc-Artboard_1 .g-cstyle0 {
+	letter-spacing:0.05em;
+}
+#fc-Artboard_1 .g-cstyle1 {
+	letter-spacing:-0.017em;
+}
+#fc-Artboard_1 .g-cstyle2 {
+	letter-spacing:0.036em;
+}
+#fc-Artboard_1 .g-cstyle3 {
+	letter-spacing:0em;
+}
+#fc-Artboard_1 .g-cstyle4 {
+	letter-spacing:0.049em;
+}
+#fc-Artboard_1 .g-cstyle5 {
+	letter-spacing:0.035em;
+}
+#fc-Artboard_1 .g-cstyle6 {
+	letter-spacing:0.026em;
+}
+#fc-Artboard_1 .g-cstyle7 {
+	letter-spacing:0.011em;
+}
+#fc-Artboard_1 .g-cstyle8 {
+	letter-spacing:0.044em;
+}
+#fc-Artboard_1 .g-cstyle9 {
+	letter-spacing:-0.1em;
+}
+#fc-Artboard_1 .g-cstyle10 {
+	letter-spacing:0.008em;
+}
+
+
