@@ -30,39 +30,47 @@
 }
 
 body{
+	overflow: auto;
 	font-family: Roboto;
 	margin: 0px;
 	background-color: black;
 }
-#fc-container {
-	margin:0 auto;
-}
-#fc-container p {
-	margin:0;
-}
 #fc-content .fc-element {
 	position:absolute;
 }
-#fc-container .fc-image {
+#fc-content .fc-image {
 	position:absolute;
 	top:0;
 	display:block;
-	width:100% !important;
+	width:100vw !important;
+	height: 56.25vw;
+	background-repeat: no-repeat;
+  	background-size: cover;
 }
-#fc-container .fc-text p { white-space: nowrap; }
+#fc-content-img-index{
+	background-image: url("./img/fc_1.jpg");
+}
+#fc-content-img-about{
+	background-image: url("./img/fc_2.jpg");
+}
+#fc-content-img-partners{
+	background-image: url("./img/fc_3.jpg");
+}
+#fc-content-img-product{
+	background-image: url("./img/fc_4.jpg");
+	min-height: 100vw;
+}
+
+
+#content .fc-text p { white-space: nowrap; }
 #fc-content {
+	margin: 0;
 	position:relative;
-	overflow:hidden;
+	min-width: 100vw;
+	min-height: 100vh;
 }
 #fc-content p {
-	font-weight:700;
-	line-height:91px;
-	height:auto;
-	filter:alpha(opacity=100);
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity:1;
-	letter-spacing:0em;
-	font-size:76px;
 	text-align:left;
 	color:rgb(255,255,255);
 	text-transform:none;
@@ -71,6 +79,37 @@ body{
 	mix-blend-mode:normal;
 	font-style:normal;
 	position:static;
+}
+#logo{
+	position: absolute;
+	width:15vw;
+	top: 2vw;
+	left: 3vw;
+
+}
+.fc-company{
+	top:6.5vw;
+	margin-top:-13.3px;
+	left:22.2098%;
+	width:15vw;
+}
+.fc-product{
+	top:6.5vw;
+	margin-top:-13.3px;
+	left:39.1775%;
+	width:118px;
+}
+.fc-gallery{
+	top:6.5vw;
+	margin-top:-13.3px;
+	left:56.1452%;
+	width:112px;
+}
+.fc-contact{
+	top:6.5vw;
+	margin-top:-13.3px;
+	left:73.1129%;
+	width:116px;
 }
 #fc-content .fc-menu-item {
 	font-weight:200;
@@ -95,38 +134,70 @@ body{
 	width: 16vw;
 	color: black;
 	font-weight:200;
-	line-height:24px;
+	line-height:2vw;
 	height:2vw;
 	letter-spacing:0.049em;
 	font-size:1.3vw;
 	padding-left: 5px;
-	padding-top: 8px;
-	padding-bottom: 4px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	z-index: 1;
 	display: none;
 	opacity: 0.97;
+	margin: 0.3vw 0vw 0.3vw 0vw;
 }
 #fc-content .fc-company:hover .fc-hover-menu-item {
 	display: block;
 }
+#fc-content .fc-company:hover ~ #fc-content-text-index,#fc-content .fc-company:hover ~ #fc-content-text-product {
+	pointer-events: none;
+}
 #fc-content .fc-product:hover .fc-hover-menu-item {
 	display: block;
 }
+#fc-content .fc-product:hover ~ #fc-content-text-index,#fc-content .fc-product:hover ~ #fc-content-text-product {
+	pointer-events: none;
+}
+#fc-content-text-index{
+	top: 10vw;
+	left: 22vw;
+}
 #fc-content .fc-element1 {
 	font-weight:100;
-	line-height:132px;
 	height:132px;
 	font-size:7.3vw;
 }
 #fc-content .fc-element2 {
 	font-weight:900;
-	line-height:246px;
+	line-height:8vw;
 	height:246px;
 	font-size:13.6vw;
 }
 #fc-content .fc-element3 {
 	height:91px;
 	font-size: 5vw;
+	font-weight: 700;
 }
-
+#forte-crete-about-text p{
+	font-size: 1.4vw;
+	color: black;
+	line-height: normal;
+	font-weight: 400;
+	height:20%;
+}
+#forte-crete-about-text{
+	top:22vw;
+	left:22vw;
+	width:45vw;
+}
+#fc-content-text-product{
+	display: block;
+	top: 15vw;
+	left: 22vw;
+	width: 60vw;
+}
+#fc-content-text-product p{
+	color: black;
+	font-size: 1.3vw;
+}
 
