@@ -60,6 +60,21 @@ body{
 	background-image: url("./img/fc_4.jpg");
 	min-height: 100vw;
 }
+#fc-content-img-data{
+	background-image: url("./img/fc_5.jpg");
+}
+#fc-content-img-certificates{
+	background-image: url("./img/fc_5.jpg");
+}
+#fc-content-img-papers{
+	background-image: url("./img/fc_5.jpg");
+}
+#fc-content-img-gallery{
+	background-image: url("./img/fc_6.jpg");
+}
+#fc-content-img-contact{
+	background-image: url("./img/fc_7.jpg");
+}
 
 
 #content .fc-text p { white-space: nowrap; }
@@ -141,21 +156,21 @@ body{
 	padding-left: 5px;
 	padding-top: 7px;
 	padding-bottom: 7px;
-	z-index: 1;
+	z-index: 2;
 	display: none;
 	opacity: 0.97;
-	margin: 0.3vw 0vw 0.3vw 0vw;
+	margin: 0vw 0vw 0.15vw 0vw;
 }
 #fc-content .fc-company:hover .fc-hover-menu-item {
 	display: block;
 }
-#fc-content .fc-company:hover ~ #fc-content-text-index,#fc-content .fc-company:hover ~ #fc-content-text-product {
+#fc-content .fc-company:hover ~ #fc-content-text-index,#fc-content .fc-company:hover ~ #fc-content-text-product, #fc-content .fc-company:hover ~ .fc-data-grid{
 	pointer-events: none;
 }
 #fc-content .fc-product:hover .fc-hover-menu-item {
 	display: block;
 }
-#fc-content .fc-product:hover ~ #fc-content-text-index,#fc-content .fc-product:hover ~ #fc-content-text-product {
+#fc-content .fc-product:hover ~ #fc-content-text-index,#fc-content .fc-product:hover ~ #fc-content-text-product, #fc-content .fc-product:hover ~ .fc-data-grid{
 	pointer-events: none;
 }
 #fc-content-text-index{
@@ -196,8 +211,89 @@ body{
 	left: 22vw;
 	width: 60vw;
 }
+
+
 #fc-content-text-product p{
 	color: black;
 	font-size: 1.3vw;
 }
+
+
+#fc-product-tests img {
+	float: left;
+	width: 68%;
+}
+
+#fc-product-tests p {
+	float: right;
+	width: 30%;
+}
+
+.fc-data-grid {
+	position: absolute;
+	top: 9vw;
+	display: grid;
+	grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+	width: 100vw;
+	min-height: 25vw;
+}
+
+.fc-data-grid img {
+	z-index: 1;
+	width: 20vw;
+	height: 23vw;
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+}
+
+.fc-data-grid div {
+	background-color: #0086a3;
+	color: white;
+	font-size: 2vw;
+	text-align: center;
+	padding-top: 50%;
+}
+.fc-data-grid .fc-2l-center{
+	padding-top: 45%;
+}
+.fc-data-grid .fc-3l-center{
+	padding-top: 40%;
+}
+.fc-data-grid .fc-4l-center{
+	padding-top: 35%;
+}
+
+.fc-contact-name-label { grid-area: nl; }
+.fc-contact-address-label { grid-area: al; }
+.fc-contact-address-value { grid-area: av; }
+.fc-contact-tel-label { grid-area: tl; }
+.fc-contact-tel-value { grid-area: tv; }
+.fc-contact-email-label { grid-area: el; }
+.fc-contact-email-value { grid-area: ev; }
+.fc-contact-web-label { grid-area: wl; }
+.fc-contact-web-value { grid-area: wv; }
+.fc-contact-coordinates-label { grid-area: cl; }
+.fc-contact-coordinates-value { grid-area: cv; }
+
+.fc-contact-grid{
+	font-size: 1.4vw;
+	line-height: 2.7vw;
+	color: white;
+	z-index: 1;
+	display: block;
+	position: absolute;
+	top: 17vw;
+	left: 19vw;
+	width: 60vw;
+	display: grid;
+  	grid-template-areas:
+    'nl nl nl'
+    'al av av'
+    'tl tv tv'
+    'el ev ev'
+    'wl wv wv'
+    'cl cv cv';
+}
+
+
 
