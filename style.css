@@ -37,6 +37,7 @@ body{
 }
 #fc-content .fc-element {
 	position:absolute;
+	z-index: 3;
 }
 #fc-content .fc-image {
 	position:absolute;
@@ -100,6 +101,7 @@ body{
 	width:15vw;
 	top: 2vw;
 	left: 3vw;
+	z-index: 2;
 
 }
 .fc-company{
@@ -263,6 +265,7 @@ body{
 	padding-top: 35%;
 }
 
+
 .fc-contact-name-label { grid-area: nl; }
 .fc-contact-address-label { grid-area: al; }
 .fc-contact-address-value { grid-area: av; }
@@ -293,6 +296,29 @@ body{
     'el ev ev'
     'wl wv wv'
     'cl cv cv';
+}
+.fc-triangle-map {
+    width: 30%;
+    padding-bottom: 21.27%; /* = width / 1.41 */
+    position: relative;
+}
+
+.fc-triangle-map:before {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: #0079c600;
+    transform-origin: 100% 0%;
+    transform: rotate(315deg);
+    cursor: pointer;
+}
+
+.fc-special-contact-content {
+	overflow: hidden;
 }
 
 
