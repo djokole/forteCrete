@@ -37,7 +37,6 @@ body{
 }
 #fc-content .fc-element {
 	position:absolute;
-	z-index: 3;
 }
 #fc-content .fc-image {
 	position:absolute;
@@ -99,7 +98,7 @@ body{
 #logo{
 	position: absolute;
 	width:15vw;
-	top: 2vw;
+	top: 1.5vw;
 	left: 3vw;
 	z-index: 2;
 
@@ -321,5 +320,81 @@ body{
 	overflow: hidden;
 }
 
+@media (max-width: 600px){
+	#menu_icon{
+		position: absolute;
+		left: 75vw;
+		top: 4vh;
+		height: 4vh;
 
+	}
+	.fc-element.fc-menu-item {
+    	display: none;
+	}
+	#logo {
+		position: absolute;
+		width: 35vw;
+		top: 5vw;
+		left: 10vw;
+		z-index: 2;
+	}
+	#fc-content-img-index {
+		background-image: url("./img/fc_mobile_1.jpg");
+	}
+	#fc-content .fc-image {
+		width: 100vw;
+		height: 100vh;
+		background-size: cover;
+	}
+	#fc-content-text-index{
+	    top: 27vh;
+    	left: 12vw;
+    }
+	
+	#fc-content .fc-element1{
+		font-size: 6.4vh;
+	}
+	#fc-content .fc-element2{
+		font-size: 12vh;
+		line-height: 8vh;
+	}
+	#fc-content .fc-element3{
+		font-size: 4.8vh;
+	}
+	/*OVDE POCINJE PONASANJE ZA MENU ICON CLICK */
+	#fc-content .fc-element.fc-menu-item.fc-text, #fc-content .fc-menu-item {
+    	display: none;
+    	width: 100vw;
+    	background-color: black;
+    	color: white;
+    	height: 7vh !important;
+    	left: 0vw;
+    	text-align: center;
+    	margin: 0vh 0vh -0.15vh 0vh;
+    	padding-left: 0px;
+    	padding-bottom: 0px;
+    	padding-top: 0px;
+    	z-index: 10;
+    	line-height: 7vh;
+    	font-size: 2vh !important;
+    	font-weight: normal;
+    	text-transform: uppercase;
+	}
+	.fc-company{
+		top: 10vh;
+	}
+	.fc-product{
+		top: 30vh;
+	}
+	.fc-gallery{
+		top: 64vh;
+	}
+	.fc-contact {
+		top: 70.5vh;
+	}
+	#fc-content p{
+		text-align: center;
+	}
+	/*OVDE SE ZAVRSAVA PONASANJE ZA MENU ICON CLICK */
+}
 
