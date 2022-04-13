@@ -381,16 +381,16 @@ body{
     	text-transform: uppercase;
 	}
 	.fc-company{
-		top: 10vh;
+		top: 11vh;
 	}
 	.fc-product{
-		top: 30vh;
+		top: 31vh;
 	}
 	.fc-gallery{
-		top: 64vh;
+		top: 65vh;
 	}
 	.fc-contact {
-		top: 70.5vh;
+		top: 71.5vh;
 	}
 	#fc-content p{
 		text-align: center;
