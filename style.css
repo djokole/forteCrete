@@ -35,6 +35,9 @@ body{
 	margin: 0px;
 	background-color: black;
 }
+.fc-mobile-only{
+	display: none;
+}
 #fc-content .fc-element {
 	position:absolute;
 }
@@ -76,8 +79,6 @@ body{
 	background-image: url("./img/fc_7.jpg");
 }
 
-
-#content .fc-text p { white-space: nowrap; }
 #fc-content {
 	margin: 0;
 	position:relative;
@@ -132,7 +133,9 @@ body{
 	line-height:24px;
 	height:24px;
 	letter-spacing:0.049em;
-	font-size:1.3vw;	
+	font-size:1.3vw;
+	margin-bottom: 0vw;
+	padding-bottom: 1vw;
 }
 .fc-menu-item a {
 	text-decoration: none;
@@ -141,13 +144,14 @@ body{
 .fc-menu-item p {
 	text-decoration: none;
 }
-#fc-content .fc-selected{
+#fc-content .fc-menu-item .fc-selected{
 	font-weight: bold;
 }
 #fc-content .fc-hover-menu-item {
 	background-color: #99bfcf;
 	position: relative;
 	width: 16vw;
+	height: 4vw;
 	color: black;
 	font-weight:200;
 	line-height:2vw;
@@ -160,7 +164,9 @@ body{
 	z-index: 2;
 	display: none;
 	opacity: 0.97;
-	margin: 0vw 0vw 0.15vw 0vw;
+	margin: 0vw 0vw 0vw 0vw;
+	border-bottom: 0.2vw solid transparent;
+	background-clip: padding-box;
 }
 #fc-content .fc-company:hover .fc-hover-menu-item {
 	display: block;
@@ -174,6 +180,7 @@ body{
 #fc-content .fc-product:hover ~ #fc-content-text-index,#fc-content .fc-product:hover ~ #fc-content-text-product, #fc-content .fc-product:hover ~ .fc-data-grid{
 	pointer-events: none;
 }
+
 #fc-content-text-index{
 	top: 10vw;
 	left: 22vw;
@@ -315,6 +322,9 @@ body{
     transform: rotate(315deg);
     cursor: pointer;
 }
+.fc-company{
+	z-index: 3;
+}
 
 .fc-special-contact-content {
 	overflow: hidden;
@@ -323,13 +333,22 @@ body{
 @media (max-width: 600px){
 	#menu_icon{
 		position: absolute;
-		left: 75vw;
-		top: 4vh;
-		height: 4vh;
+		left: 80vw;
+		top: 30px;
+		height: 2em;
 
+	}
+	#fc-content .fc-menu-item .fc-selected{
+		font-weight: 900;
 	}
 	.fc-element.fc-menu-item {
     	display: none;
+	}
+	.fc-desktop-only{
+		display: none;
+	}
+	.fc-mobile-only{
+		display: block;
 	}
 	#logo {
 		position: absolute;
@@ -337,29 +356,6 @@ body{
 		top: 5vw;
 		left: 10vw;
 		z-index: 2;
-	}
-	#fc-content-img-index {
-		background-image: url("./img/fc_mobile_1.jpg");
-	}
-	#fc-content .fc-image {
-		width: 100vw;
-		height: 100vh;
-		background-size: cover;
-	}
-	#fc-content-text-index{
-	    top: 27vh;
-    	left: 12vw;
-    }
-	
-	#fc-content .fc-element1{
-		font-size: 6.4vh;
-	}
-	#fc-content .fc-element2{
-		font-size: 12vh;
-		line-height: 8vh;
-	}
-	#fc-content .fc-element3{
-		font-size: 4.8vh;
 	}
 	/*OVDE POCINJE PONASANJE ZA MENU ICON CLICK */
 	#fc-content .fc-element.fc-menu-item.fc-text, #fc-content .fc-menu-item {
@@ -395,6 +391,146 @@ body{
 	#fc-content p{
 		text-align: center;
 	}
+	#fc-content .fc-hover-menu-item{
+		border: none;
+	}
+
 	/*OVDE SE ZAVRSAVA PONASANJE ZA MENU ICON CLICK */
+	#fc-content-img-index {
+		background-image: url("./img/fc_mobile_1.jpg");
+	}
+	#fc-content .fc-image {
+		width: 100vw;
+		height: 100vh;
+		background-size: cover;
+	}
+	#fc-content-text-index{
+	    top: 27vh;
+    	left: 12vw;
+    }
+    #fc-content-text-index p{
+	    text-align: left;
+    }
+	
+	#fc-content .fc-element1{
+		font-size: 6.4vh;
+	}
+	#fc-content .fc-element2{
+		font-size: 12vh;
+		line-height: 8vh;
+	}
+	#fc-content .fc-element3{
+		font-size: 4.8vh;
+	}
+	#fc-content-img-about {
+		background-image: url("./img/fc_mobile_2.jpg");
+	}
+	#fc-content-img-partners {
+		background-image: url("./img/fc_mobile_2.jpg");
+	}
+	#fc-content #fc-content-img-about{
+		height: 900px;
+	}
+	#fc-content #fc-content-img-partners{
+		height: 900px;
+	}
+	#forte-crete-about-text {
+		top: 380px;
+		left: 15vw;
+		width: 70vw;
+	}
+	#forte-crete-about-text #fc-about-text-par{
+		font-size: 1em;
+		text-align: left;
+	}
+	
+	#fc-mobile-company-heading{
+		position: absolute;
+		top: 100px;
+		left: 65vw;
+		color: white;
+		font-weight: 400;
+		font-size: 1.3em;
+	}
+	#fc-mobile-partners-heading{
+		position: absolute;
+		top: 620px;
+		left: 15vw;
+		color: white;
+	}
+	#fc-content-img-product {
+		background-image: url("./img/fc_mobile_3.jpg");
+	}
+	#fc-content #fc-content-img-product{
+		height: 1830px;
+	}
+	#fc-content-text-product{
+		left: 4vw;
+		width: 92vw;
+		top: 290px;
+	} 
+	#fc-content-text-product p{
+		font-size: 0.95em;
+		text-align: left;
+		padding-bottom: 12px;
+	}
+	#fc-product-tests{
+		position: absolute;
+		top:1170px;
+	}
+	#fc-product-tests img {
+		float: none;
+		width: 100%;
+	}
+	#fc-product-tests p{
+		float: none;
+		width: 100%;
+	}
+	#fc-content-img-data {
+		background-image: url("./img/fc_mobile_4.png");
+	}
+	#fc-content #fc-content-img-data{
+		height: 900px;
+	}
+	.fc-data-grid {
+		top: 85px;
+		grid-template-columns: 50vw 50vw;
+		overflow: hidden;
+		grid-template-areas:
+		'data_field_1 data_field_9'
+	    'data_field_2 data_field_3'
+	    'data_field_5 data_field_4'
+	    'data_field_10 data_field_8';
+	    height: 850px;
+
+	}
+	.fc-data-grid > * {
+		width: 50vw!important;
+		height: 50vw!important;
+	}
+	.fc-data-grid div {
+		padding: 0px;
+		display: table;
+	}
+	.fc_data_field_1 { grid-area: data_field_1; }
+	.fc_data_field_2 { grid-area: data_field_2; }
+	.fc_data_field_3 { grid-area: data_field_3; }
+	.fc_data_field_4 { grid-area: data_field_4; }
+	.fc_data_field_5 { grid-area: data_field_5; }
+	.fc_data_field_6 { grid-area: data_field_6; }
+	.fc_data_field_7 { grid-area: data_field_7; }
+	.fc_data_field_8 { grid-area: data_field_8; }
+	.fc_data_field_9 { grid-area: data_field_9; }
+	.fc_data_field_10 { grid-area: data_field_10; }
+
+	.fc-data-grid {
+
+	}
+	.fc_data_vertical_align {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	
 }
 
