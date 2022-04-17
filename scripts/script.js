@@ -12,9 +12,9 @@ let langResourcesArr = {
     "3":"POURABLE",
     "4":"POURABLE",
     "5":"POURABLE",
-    "6":"POURABLE",
+    "6":"PRODUCT INFO",
     "7":"ForteCrete150 is a special class of densely packed fiber reinforced composite with optimized granular packing and very low water contetn that offers exceptional strength, durability, ductility, pull-out resistence and long term stability. It is designed to exhibit outstanding mechanical propertires including sustained postcracking tensile strength. ForteCrete150 is non-porous concrete imprevious to water and chemicals. It is highly resistant against acid waters, deicing salt, freeze-thaw deterioration/degradation, chloride ion penetration, chemical attack and carbonation",
-    "8":"POURABLE",
+    "8":"APPLICATIONS",
     "9":"ForteCrete150 is suitable for casting urban street furniture, thin stairs and balconies, interior decor panels, decorative facades and imact and blast resistant structures. It is primarily used for road overlays, links slags, expansion joint keys, strengthening of concrete and steel members, pier jacketing and is a closure pour UHCP material to connect prefabricated structural elements on-site. It can be used to repair traditional, cracked and failing concrete and build structures taht significantly outlast traditional concrete ones.",
     "10":"PROPERTIES",
     "11":"Tests were performed at University of Belgrade, Faculty of Civil Engineering."
@@ -34,17 +34,19 @@ let langResourcesArr = {
   },
 };
 
-function changeLanguage(clickedLangChoiceId) {
+function changeLanguage(clickedLangChoiceId, productsPage) {
   $(function() { 
       $(".translation").each(function() {
         let currentlyIteratedTranslationKey = $(this).attr("key");
         let localizedValForTranslationKey = langResourcesArr[clickedLangChoiceId][currentlyIteratedTranslationKey];
         $(this).text(localizedValForTranslationKey);
       });
-      if(clickedLangChoiceId == "en"){
-        document.getElementById("fc_products_img").src = "img/fc_tests_eng.png";
-      }else{
-        document.getElementById("fc_products_img").src = "img/fc_tests_srb.png";
+      if(productsPage==1){
+        if(clickedLangChoiceId == "en"){
+          document.getElementById("fc_products_img").src = "img/fc_tests_eng.png";
+        }else{
+          document.getElementById("fc_products_img").src = "img/fc_tests_srb.png";
+        }
       }
     });
 }

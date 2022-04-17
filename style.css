@@ -439,7 +439,7 @@ body a{
 		left: 80vw;
 	}
 	#fc-content > .srb{
-		left: 86vw;
+		left: 90vw;
 	}
 	.fc-company{
 		top: 11vh;
@@ -545,7 +545,7 @@ body a{
 		top: 290px;
 	} 
 	#fc-content-text-product p{
-		font-size: 0.95em;
+		font-size: 0.90em;
 		text-align: left;
 		padding-bottom: 12px;
 	}
