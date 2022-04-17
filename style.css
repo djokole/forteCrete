@@ -261,14 +261,13 @@ body{
 	text-align: center;
 	padding-top: 50%;
 }
-.fc-data-grid .fc-2l-center{
-	padding-top: 45%;
+.fc-data-grid div {
+	padding: 0px;
+	display: table;
 }
-.fc-data-grid .fc-3l-center{
-	padding-top: 40%;
-}
-.fc-data-grid .fc-4l-center{
-	padding-top: 35%;
+.fc_data_vertical_align {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 
@@ -303,6 +302,9 @@ body{
     'wl wv wv'
     'cl cv cv';
 }
+.fc-contact-grid div a{
+	color: white;
+}
 .fc-triangle-map {
     width: 30%;
     padding-bottom: 21.27%; /* = width / 1.41 */
@@ -334,8 +336,9 @@ body{
 	#menu_icon{
 		position: absolute;
 		left: 80vw;
-		top: 30px;
+		top: 40px;
 		height: 2em;
+		z-index: 3;
 
 	}
 	#fc-content .fc-menu-item .fc-selected{
@@ -393,6 +396,7 @@ body{
 	}
 	#fc-content .fc-hover-menu-item{
 		border: none;
+		opacity: 1;
 	}
 
 	/*OVDE SE ZAVRSAVA PONASANJE ZA MENU ICON CLICK */
@@ -423,10 +427,10 @@ body{
 		font-size: 4.8vh;
 	}
 	#fc-content-img-about {
-		background-image: url("./img/fc_mobile_2.jpg");
+		background-image: url("./img/fc_mobile_2a.jpg");
 	}
 	#fc-content-img-partners {
-		background-image: url("./img/fc_mobile_2.jpg");
+		background-image: url("./img/fc_mobile_2a.jpg");
 	}
 	#fc-content #fc-content-img-about{
 		height: 900px;
@@ -435,34 +439,43 @@ body{
 		height: 900px;
 	}
 	#forte-crete-about-text {
-		top: 380px;
+		top: 230px;
 		left: 15vw;
 		width: 70vw;
+		color: white;
 	}
 	#forte-crete-about-text #fc-about-text-par{
 		font-size: 1em;
 		text-align: left;
+		color: white;
 	}
-	
+	#forte-crete-about-text p{
+		font-weight: 200;
+	}
 	#fc-mobile-company-heading{
 		position: absolute;
 		top: 100px;
 		left: 65vw;
 		color: white;
-		font-weight: 400;
 		font-size: 1.3em;
 	}
 	#fc-mobile-partners-heading{
 		position: absolute;
-		top: 620px;
+		top: 500px;
 		left: 15vw;
 		color: white;
 	}
 	#fc-content-img-product {
 		background-image: url("./img/fc_mobile_3.jpg");
+		height: 1830px !important;
 	}
-	#fc-content #fc-content-img-product{
-		height: 1830px;
+	#fc-mobile-product-heading{
+		position: absolute;
+		top: 100px;
+		left: 65vw;
+		color: white;
+		font-size: 1.6em;
+		font-weight: 400;
 	}
 	#fc-content-text-product{
 		left: 4vw;
@@ -493,7 +506,7 @@ body{
 		height: 900px;
 	}
 	.fc-data-grid {
-		top: 85px;
+		top: 100px;
 		grid-template-columns: 50vw 50vw;
 		overflow: hidden;
 		grid-template-areas:
@@ -502,15 +515,12 @@ body{
 	    'data_field_5 data_field_4'
 	    'data_field_10 data_field_8';
 	    height: 850px;
+	    background-color: black;
 
 	}
 	.fc-data-grid > * {
 		width: 50vw!important;
 		height: 50vw!important;
-	}
-	.fc-data-grid div {
-		padding: 0px;
-		display: table;
 	}
 	.fc_data_field_1 { grid-area: data_field_1; }
 	.fc_data_field_2 { grid-area: data_field_2; }
@@ -522,15 +532,72 @@ body{
 	.fc_data_field_8 { grid-area: data_field_8; }
 	.fc_data_field_9 { grid-area: data_field_9; }
 	.fc_data_field_10 { grid-area: data_field_10; }
+	.fc-gallery-invisible { grid-area: data_field_11; }
 
-	.fc-data-grid {
-
-	}
 	.fc_data_vertical_align {
-		display: table-cell;
-		vertical-align: middle;
+		font-size: 2em;
 	}
-	
+	#fc-content-img-certificates {
+		background-image: url("./img/fc_mobile_5.jpg");
+		height: 900px !important;
+	}
+	#fc-content-img-papers {
+		background-image: url("./img/fc_mobile_5.jpg");
+		height: 900px !important;
+	}
+	#fc-mobile-certificate-heading{
+		position: absolute;
+		top: 100px;
+		left: 55vw;
+		color: black;
+		font-size: 1.6em;
+	}
+	#fc-mobile-papers-heading{
+		position: absolute;
+		top: 100px;
+		left: 60vw;
+		color: black;
+		font-size: 1.6em;
+	}
+	#fc-content-img-gallery {
+		background-image: url("./img/fc_mobile_6.jpg");
+		height: 900px !important;
+	}
+	#fc-gallery-grid img {
+		display: none;
+	}
+	.fc-gallery-invisible{
+		opacity: 0;
+	}
+	#fc-gallery-grid{
+		margin-top: 30px;
+		grid-template-areas:
+		'data_field_1 data_field_11'
+	    'data_field_2 data_field_11'
+	    'data_field_5 data_field_11'
+	    'data_field_7 data_field_11'
+	    'data_field_10 data_field_11';
+	    height: 750px;
+	    background-color: rgba(201, 76, 76, 0);
+	}
+	#fc-gallery-grid > div{
+		height: 100px !important;
+	}
+	#fc-content-img-contact {
+		background-image: url("./img/fc_mobile_7.jpg");
+		height: 900px !important;
+	}
+	.fc-contact-grid{
+		font-size: 1em;
+		line-height: 1.4em;
+		top: 220px;
+		left: 14vw;
+		width: 72vw;
+	}
+	.fc-triangle-map:before{
+		transform: rotate(315deg);
+		top: 390px;
+	}
 	
 }
 
