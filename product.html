@@ -14,13 +14,15 @@
 			<img src="./img/logo.png" id="logo">
 		</a>
 		<img id="menu_icon" src="img/menu_icon.png">
+		<button id="sr" class="fc-translation-button srb" onclick="changeLanguage(this.id)">SRB</button>
+		<button id="en" class="fc-translation-button eng"onclick="changeLanguage(this.id)">ENG</button>
 		<div class="fc-element fc-menu-item fc-text fc-company">
 			<p class="fc-menu-item"><a href="./index.html">COMPANY</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item fc-selected"><a href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item fc-selected  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a class="fc-selected" href="./product.html">Product Info</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./data.html">Technical Data Sheet</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
@@ -35,18 +37,18 @@
 		<h3 class="fc-mobile-only" id="fc-mobile-product-heading">Product</h3>
 		<div class="fc-element" id="fc-content-text-product">
 		<p>
-			<b>PRODUCT INFO</b><br><br class="fc-mobile-only">
-			&#8226; ForteCrete150 is a special class of densely packed fiber reinforced composite with optimized granular packing and very low water contetn that offers exceptional strength, durability, ductility, pull-out resistence and long term stability. It is designed to exhibit outstanding mechanical propertires including sustained postcracking tensile strength. ForteCrete150 is non-porous concrete imprevious to water and chemicals. It is highly resistant against acid waters, deicing salt, freeze-thaw deterioration/degradation, chloride ion penetration, chemical attack and carbonation.
+			<b class="translation" key="6">PRODUCT INFO</b><br><br class="fc-mobile-only">
+			&#8226; <span class="translation" key="7">ForteCrete150 is a special class of densely packed fiber reinforced composite with optimized granular packing and very low water contetn that offers exceptional strength, durability, ductility, pull-out resistence and long term stability. It is designed to exhibit outstanding mechanical propertires including sustained postcracking tensile strength. ForteCrete150 is non-porous concrete imprevious to water and chemicals. It is highly resistant against acid waters, deicing salt, freeze-thaw deterioration/degradation, chloride ion penetration, chemical attack and carbonation.</span>
+		</p>
+		<p>
+			<br>
+			<b class="translation" key="8">APPLICATIONS</b><br><br class="fc-mobile-only">
+			&#8226; <span class="translation" key="9">ForteCrete150 is suitable for casting urban street furniture, thin stairs and balconies, interior decor panels, decorative facades and imact and blast resistant structures. It is primarily used for road overlays, links slags, expansion joint keys, strengthening of concrete and steel members, pier jacketing and is a closure pour UHCP material to connect prefabricated structural elements on-site. It can be used to repair traditional, cracked and failing concrete and build structures taht significantly outlast traditional concrete ones.</span>
 			
 		</p>
 		<p>
 			<br>
-			<b>APPLICATIONS</b><br><br class="fc-mobile-only">
-			&#8226; ForteCrete150 is suitable for casting urban street furniture, thin stairs and balconies, interior decor panels, decorative facades and imact and blast resistant structures. It is primarily used for road overlays, links slags, expansion joint keys, strengthening of concrete and steel members, pier jacketing and is a closure pour UHCP material to connect prefabricated structural elements on-site. It can be used to repair traditional, cracked and failing concrete and build structures taht significantly outlast traditional concrete ones.
-		</p>
-		<p>
-			<br>
-			<b>PROPERTIES</b><br><br class="fc-mobile-only">
+			<b class="translation" key="10">PROPERTIES</b><br><br class="fc-mobile-only">
 			&#8226; densely packed fiber reinforced matrix with optimized granular packing<br>
 			&#8226; outstanding mechanical properties<br>
 			&#8226; up to 400 times more durable material against corrosion, <br>abrasion and impact than ordinary concrete<br>
@@ -62,8 +64,8 @@
 			&#8226; rapid construction, increased material efficiency & lower transportation cost
 		</p>
 		<div id="fc-product-tests">
-			<img src="img/fc_tests.png">
-			<p>Tests were performed at University of Belgrade, Faculty of Civil Engineering.</p>
+			<img src="img/fc_tests_eng.png" id="fc_products_img">
+			<p class="translation" key="11">Tests were performed at University of Belgrade, Faculty of Civil Engineering.</p>
 		</div>
 	</div>
 	</div>

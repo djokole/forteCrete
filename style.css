@@ -35,6 +35,9 @@ body{
 	margin: 0px;
 	background-color: black;
 }
+body a{
+	color: inherit;
+}
 .fc-mobile-only{
 	display: none;
 }
@@ -180,6 +183,24 @@ body{
 #fc-content .fc-product:hover ~ #fc-content-text-index,#fc-content .fc-product:hover ~ #fc-content-text-product, #fc-content .fc-product:hover ~ .fc-data-grid{
 	pointer-events: none;
 }
+#fc-content > .fc-translation-button{
+	position: absolute;
+	top: 1.5vh;
+	width: 30px;
+	height: 15px;
+	border-radius: 5px;
+	border-width: 1px;
+	font-size: 0.5em;
+	font-weight: bold;
+	background-color: black;
+	color: white;
+}
+#fc-content > .eng{
+	left: 90vw;
+}
+#fc-content > .srb{
+	left: 86vw;
+}
 
 #fc-content-text-index{
 	top: 10vw;
@@ -269,7 +290,42 @@ body{
 	display: table-cell;
 	vertical-align: middle;
 }
+#fc_certs > h3 {
+	margin: 0px;
+}
+#fc_certs > h3 > a {
+	font-size: 1.5em;
+	top: 35vh;
+	color: black!important;
+	position: absolute;
+	left: 20vw;
+}
+#fc_certs > h3:nth-child(2) > a {
+	top: 45vh;
+}
 
+#fc_papers > h3 {
+	margin: 0px;
+}
+#fc_papers {
+	width: 70vw;
+	position: absolute;
+	left: 15vw;
+	top: 300px;
+}
+#fc_papers > h3 {
+	margin-bottom: 30px;
+}
+#fc_papers > h3 > a {
+	font-size: 1.2em;
+	color: black!important;	
+}
+#fc_papers > h3:nth-child(2) > a {
+	top: 450px;
+}
+#fc_papers > h3:nth-child(3) > a {
+	top: 600px;
+}
 
 .fc-contact-name-label { grid-area: nl; }
 .fc-contact-address-label { grid-area: al; }
@@ -348,10 +404,10 @@ body{
     	display: none;
 	}
 	.fc-desktop-only{
-		display: none;
+		display: none!important;
 	}
 	.fc-mobile-only{
-		display: block;
+		display: block!important;
 	}
 	#logo {
 		position: absolute;
@@ -379,17 +435,23 @@ body{
     	font-weight: normal;
     	text-transform: uppercase;
 	}
+	#fc-content > .eng{
+		left: 80vw;
+	}
+	#fc-content > .srb{
+		left: 86vw;
+	}
 	.fc-company{
 		top: 11vh;
 	}
 	.fc-product{
-		top: 31vh;
+		top: 24vh;
 	}
 	.fc-gallery{
-		top: 65vh;
+		top: 51vh;
 	}
 	.fc-contact {
-		top: 71.5vh;
+		top: 57.5vh;
 	}
 	#fc-content p{
 		text-align: center;
@@ -518,6 +580,9 @@ body{
 	    background-color: black;
 
 	}
+	.fc-data-grid div{
+		font-size: 1em;
+	}
 	.fc-data-grid > * {
 		width: 50vw!important;
 		height: 50vw!important;
@@ -534,9 +599,7 @@ body{
 	.fc_data_field_10 { grid-area: data_field_10; }
 	.fc-gallery-invisible { grid-area: data_field_11; }
 
-	.fc_data_vertical_align {
-		font-size: 2em;
-	}
+
 	#fc-content-img-certificates {
 		background-image: url("./img/fc_mobile_5.jpg");
 		height: 900px !important;

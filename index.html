@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Forte Crete</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/script.js"></script>
 </head>
 <body>
 	<div id="fc-content">
@@ -14,13 +15,15 @@
 			<img src="./img/logo.png" id="logo">
 		</a>
 		<img id="menu_icon" src="img/menu_icon.png">
+		<button id="sr" class="fc-translation-button srb" onclick="changeLanguage(this.id)">SRB</button>
+		<button id="en" class="fc-translation-button eng"onclick="changeLanguage(this.id)">ENG</button>
 		<div class="fc-element fc-menu-item fc-text fc-company">
 			<p class="fc-menu-item fc-selected"><a href="./index.html">COMPANY</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item "><a href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./product.html">Product Info</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./data.html">Technical Data Sheet</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
@@ -34,14 +37,14 @@
 		</div>
 		<div class="fc-element" id="fc-content-text-index">
 			<p>
-				<span class="fc-element1">POURABLE<br></span>
-				<span class="fc-element2">UHPC<br></span>
-				<span class="fc-element3">ULTRA HIGH<br></span>
-				<span class="fc-element3">PERFORMANCE<br></span>
-				<span class="fc-element3">CONCRETE</span>
+				<span class="fc-element1 translation" key="1">POURABLE</span><br>
+				<span class="fc-element2 translation" key="2">UHPC</span><br>
+				<span class="fc-element3 translation" key="3">ULTRA HIGH</span><br>
+				<span class="fc-element3 translation" key="4">PERFORMANCE</span><br>
+				<span class="fc-element3 translation" key="5">CONCRETE</span>
 			</p>
 		</div>
 	</div>
-	<script src="scripts/script.js"></script>
+	
 </body>
 </html>

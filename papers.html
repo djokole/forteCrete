@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Forte Crete</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/script.js"></script>
 </head>
 <body>
 	<div id="fc-content">
@@ -17,10 +18,10 @@
 		<div class="fc-element fc-menu-item fc-text fc-company">
 			<p class="fc-menu-item"><a href="./index.html">COMPANY</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item fc-selected"><a href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item fc-selected  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./product.html">Product Info</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./data.html">Technical Data Sheet</a></p>
 			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
@@ -33,8 +34,13 @@
 			<p class="fc-menu-item"><a href="./contact.html">CONTACT</a></p>
 		</div>
 		<h3 class="fc-mobile-only" id="fc-mobile-papers-heading">PAPERS</h3>
+		<div id="fc_papers">
+			<h3><a href="./data/published_papers/uhcp.pdf" target="_blank">Physical-mechanical properties and durability of Ultra-high Performance Concrete</a></h3>
+			<h3><a href="./data/published_papers/properties.pdf" target="_blank">Physical and mechanical properties of ultra high performance steel fibre reinforced concrete</a></h3>
+			<h3><a href="./data/published_papers/materijali.pdf" target="_blank">Materijali 02</a></h3>
+		</div>
 	</div>
 
-	<script src="scripts/script.js"></script>
+	
 </body>
 </html>
