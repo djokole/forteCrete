@@ -439,7 +439,6 @@ body a{
     	font-size: 2vh !important;
     	font-weight: normal;
     	text-transform: uppercase;
-    	animation: fadeIn 0.6s;
 	}
 	#fc-content > .eng{
 		left: 80vw;
