@@ -6,35 +6,45 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Forte Crete</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="ForteCrete durable concrete solid tough tests construction durability buildings">
+    <meta name="description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ForteCrete">
+    <meta property="og:description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+	<script src="scripts/script.js"></script>
+    <link rel="icon" href="img/favicon.ico" type="image/icon type">
 </head>
 <body>
 	<div id="fc-content" class="fc-special-contact-content">
 		<div id="fc-content-img-contact" class="fc-image"></div>
 		<a href="./index.html">
-			<img src="./img/logo.png" id="logo">
+			<img src="./img/logo.png" id="logo" alt="ForteCrete logo">
 		</a>
 		<img id="menu_icon" src="img/menu_icon.png">
+		<button id="sr" class="fc-translation-button srb" onclick="changeLanguage(this.id, 0)">SRB</button>
+		<button id="en" class="fc-translation-button eng"onclick="changeLanguage(this.id, 0)">ENG</button>
 		<div class="fc-element fc-menu-item fc-text fc-company">
-			<p class="fc-menu-item"><a href="./index.html">COMPANY</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item "><a class="translation" key="menu-0" href="./index.html">COMPANY</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a class="translation" key="menu-1" href="./about.html">About</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a class="translation" key="menu-2" href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./product.html">Product Info</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./data.html">Technical Data Sheet</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./papers.html">Published Papers</a></p>
+			<p class="fc-menu-item  fc-desktop-only"><a  class="translation" key="menu-3" href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-4" href="./product.html">Product Info</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-5" href="./data.html">Technical Data Sheet</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-6" href="./cert.html">Certificates</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-7" href="./papers.html">Published Papers</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-gallery">
-			<p class="fc-menu-item"><a href="./gallery.html">GALLERY</a></p>
+			<p class="fc-menu-item"><a  class="translation" key="menu-8" href="./gallery.html">GALLERY</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-contact">
-			<p class="fc-menu-item"><a class="fc-selected" href="./contact.html">CONTACT</a></p>
+			<p class="fc-menu-item fc-selected"><a  class="translation" key="menu-9" href="./contact.html">CONTACT</a></p>
 		</div>
 		<div class="fc-contact-grid">
 			<div class="fc-contact-name-label"><h3>Fortecrete Doo Negotin</h3></div>
-			<div class="fc-contact-address-label">Address:</div>
+			<div class="fc-contact-address-label translation" key="26">Address:</div>
 			<div class="fc-contact-address-value">Milomira Radosavljevića Pikija 20, Negotin, Serbia</div>  
 			<div class="fc-contact-tel-label">Tel:</div>
 			<div class="fc-contact-tel-value"><a href="tel:+381 62 550 468">+381 62 550 468</a><br><a href="tel:+971 50 4456 913">+971 50 4456 913</a></div>
@@ -42,14 +52,11 @@
 			<div class="fc-contact-email-value"><a href="mailto:info@fortecrete-uhpc.com">info@fortecrete-uhpc.com</a></div>
 			<div class="fc-contact-web-label">Web:</div>
 			<div class="fc-contact-web-value"><a href="www.fortecrete-uhpc.com">www.fortecrete-uhpc.com</a></div>
-			<div class="fc-contact-coordinates-label">Coordinates:</div>
+			<div class="fc-contact-coordinates-label translation" key="27">Coordinates:</div>
 			<div class="fc-contact-coordinates-value">44.24260388023506<br>22.540497467911056</div>
 		</div>
 		<div class="fc-triangle-map" onclick="location.href='https://www.google.com/maps/place/Fortecrete/@44.2424814,22.5386219,17z/data=!3m1!4b1!4m5!3m4!1s0x4753bf877cc7acbd:0x89c528cc8aad7489!8m2!3d44.2424782!4d22.5404624?hl=sr';">
 		</div>
 	</div>
-	
-
-	<script src="scripts/script.js"></script>
 </body>
 </html>

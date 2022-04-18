@@ -6,48 +6,56 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Forte Crete</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="ForteCrete durable concrete solid tough tests construction durability buildings">
+    <meta name="description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ForteCrete">
+    <meta property="og:description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+	<script src="scripts/script.js"></script>
+    <link rel="icon" href="img/favicon.ico" type="image/icon type">
 </head>
 <body>
 	<div id="fc-content">
 		<div id="fc-content-img-data" class="fc-image"></div>
 		<a href="./index.html">
-			<img src="./img/logo.png" id="logo">
+			<img src="./img/logo.png" id="logo" alt="ForteCrete logo">
 		</a>
 		<img id="menu_icon" src="img/menu_icon.png">
+		<button id="sr" class="fc-translation-button srb" onclick="changeLanguage(this.id, 0)">SRB</button>
+		<button id="en" class="fc-translation-button eng"onclick="changeLanguage(this.id, 0)">ENG</button>
 		<div class="fc-element fc-menu-item fc-text fc-company">
-			<p class="fc-menu-item"><a href="./index.html">COMPANY</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item "><a class="translation" key="menu-0" href="./index.html">COMPANY</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a class="translation" key="menu-1" href="./about.html">About</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a class="translation" key="menu-2" href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item fc-selected  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./product.html">Product Info</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a class="fc-selected" href="./data.html">Technical Data Sheet</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./papers.html">Published Papers</a></p>
+			<p class="fc-menu-item  fc-desktop-only fc-selected"><a  class="translation" key="menu-3" href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-4" href="./product.html">Product Info</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-selected"><a  class="translation" key="menu-5" href="./data.html">Technical Data Sheet</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-6" href="./cert.html">Certificates</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-7" href="./papers.html">Published Papers</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-gallery">
-			<p class="fc-menu-item"><a href="./gallery.html">GALLERY</a></p>
+			<p class="fc-menu-item"><a  class="translation" key="menu-8" href="./gallery.html">GALLERY</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-contact">
-			<p class="fc-menu-item"><a href="./contact.html">CONTACT</a></p>
+			<p class="fc-menu-item"><a  class="translation" key="menu-9" href="./contact.html">CONTACT</a></p>
 		</div>
 		<div class="fc-data-grid">
-			<img src="./img/item1.jpg" class = "fc_data_field_1">
+			<img src="./img/item1.jpg" class = "fc_data_field_1" alt="ForteCrete concrete blocks made">
 			<div class = "fc_data_field_2"><b class="fc_data_vertical_align"><a href="./data/technical_data/fc150_technical_data.pdf" target="_blank">Fortecrete150</a></b></div>
-			<img src="./img/item2.jpg" class = "fc_data_field_3">
+			<img src="./img/item2.jpg" class = "fc_data_field_3" alt="ForteCrete concrete pouring diameter">
 			<div class = "fc_data_field_4"><b class="fc_data_vertical_align">Fortecrete Bianco</b></div>
-			<img src="./img/item3.jpg" class = "fc_data_field_5">
-			<img src="./img/item4.jpg" class = "fc_data_field_6">
-			<img src="./img/item5.jpg" class = "fc_data_field_7">
-			<img src="./img/item6.jpg" class = "fc_data_field_8">
-			<img src="./img/item7.jpg" class = "fc-desktop-only">
-			<img src="./img/item8.jpg" class = "fc-desktop-only">
+			<img src="./img/item3.jpg" class = "fc_data_field_5" alt="ForteCrete concrete blocks made">
+			<img src="./img/item4.jpg" class = "fc_data_field_6" alt="ForteCrete armed tough concrete">
+			<img src="./img/item5.jpg" class = "fc_data_field_7" alt="ForteCrete withstands rough conditions">
+			<img src="./img/item6.jpg" class = "fc_data_field_8" alt="ForteCrete solid stable">
+			<img src="./img/item7.jpg" class = "fc-desktop-only" alt="ForteCrete test load durability">
+			<img src="./img/item8.jpg" class = "fc-desktop-only" alt="ForteCrete reference for toughness">
 			<div class = "fc_data_field_9 fc-mobile-only"></div>
 			<div class = "fc_data_field_10 fc-mobile-only"></div>
 		</div>
 	</div>
-
-	<script src="scripts/script.js"></script>
 </body>
 </html>

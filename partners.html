@@ -6,31 +6,41 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Forte Crete</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="ForteCrete durable concrete solid tough tests construction durability buildings">
+    <meta name="description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ForteCrete">
+    <meta property="og:description" content="ForteCrete Doo is a company based in Negotin, Serbia, specialized in the development, production, and commercial trade of Ultra-High-Performance Concrete and UHPC premixes. The company was founded in 2021.">
+	<script src="scripts/script.js"></script>
+    <link rel="icon" href="img/favicon.ico" type="image/icon type">
 </head>
 <body>
 	<div id="fc-content">
 		<div id="fc-content-img-partners" class="fc-image"></div>
 		<a href="./index.html">
-			<img src="./img/logo.png" id="logo">
+			<img src="./img/logo.png" id="logo" alt="ForteCrete logo">
 		</a>
 		<img id="menu_icon" src="img/menu_icon.png">
+		<button id="sr" class="fc-translation-button srb" onclick="changeLanguage(this.id, 0)">SRB</button>
+		<button id="en" class="fc-translation-button eng"onclick="changeLanguage(this.id, 0)">ENG</button>
 		<div class="fc-element fc-menu-item fc-text fc-company">
-			<p class="fc-menu-item fc-selected"><a href="./index.html">COMPANY</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./about.html">About</a></p>
-			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only"><a class="fc-selected" href="./partners.html">Partners</a></p>
+			<p class="fc-menu-item fc-selected"><a class="translation" key="menu-0" href="./index.html">COMPANY</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a class="translation" key="menu-1" href="./about.html">About</a></p>
+			<p class="fc-menu-item fc-hover-menu-item fc-desktop-only fc-selected"><a class="translation" key="menu-2" href="./partners.html">Partners</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-product">
-			<p class="fc-menu-item  fc-desktop-only"><a href="./product.html">PRODUCT</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./product.html">Product Info</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./data.html">Technical Data Sheet</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./cert.html">Certificates</a></p>
-			<p class="fc-menu-item fc-hover-menu-item "><a href="./papers.html">Published Papers</a></p>
+			<p class="fc-menu-item  fc-desktop-only"><a  class="translation" key="menu-3" href="./product.html">PRODUCT</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-4" href="./product.html">Product Info</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-5" href="./data.html">Technical Data Sheet</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-6" href="./cert.html">Certificates</a></p>
+			<p class="fc-menu-item fc-hover-menu-item "><a  class="translation" key="menu-7" href="./papers.html">Published Papers</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-gallery">
-			<p class="fc-menu-item"><a href="./gallery.html">GALLERY</a></p>
+			<p class="fc-menu-item"><a  class="translation" key="menu-8" href="./gallery.html">GALLERY</a></p>
 		</div>
 		<div class="fc-element fc-menu-item fc-text fc-contact">
-			<p class="fc-menu-item"><a href="./contact.html">CONTACT</a></p>
+			<p class="fc-menu-item"><a  class="translation" key="menu-9" href="./contact.html">CONTACT</a></p>
 		</div>
 		<h3 class="fc-mobile-only" id="fc-mobile-company-heading">Company</h3>
 		<div id="forte-crete-about-text" class="fc-element fc-text fc-mobile-only">
@@ -41,7 +51,5 @@
 		</div>
 		<h3 class="fc-mobile-only" id="fc-mobile-partners-heading">Partners</h3>
 	</div>
-
-	<script src="scripts/script.js"></script>
 </body>
 </html>
