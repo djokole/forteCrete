@@ -3,6 +3,7 @@ $(document).ready(function(){
     $("#fc-content .fc-element.fc-menu-item.fc-text, #fc-content .fc-menu-item").toggle();
   });
 
+  changeLanguage(sessionStorage.getItem("currentLanguage"));
   
 });
 let langResourcesArr = {
@@ -20,8 +21,8 @@ let langResourcesArr = {
     "menu-9":"CONTACT",
     "1":"Product",
     "2":"Certificates",
-    "3":"English Certificate",
-    "4":"Serbian Certificate",
+    "3":"Properties and Durability",
+    "4":"IMK Report No. 402",
     "5":"Papers",
     "6":"PRODUCT INFO",
     "7":"ForteCrete150 is a special class of densely packed fiber reinforced composite with optimized granular packing and very low water contetn that offers exceptional strength, durability, ductility, pull-out resistence and long term stability. It is designed to exhibit outstanding mechanical propertires including sustained postcracking tensile strength. ForteCrete150 is non-porous concrete imprevious to water and chemicals. It is highly resistant against acid waters, deicing salt, freeze-thaw deterioration/degradation, chloride ion penetration, chemical attack and carbonation",
@@ -44,7 +45,12 @@ let langResourcesArr = {
     "24":"increased girder span with light-weight slender cross-sections",
     "25":"rapid construction, increased material efficiency & lower transportation cost",
     "26":"Address:",
-    "27":"Coordinates:"
+    "27":"Coordinates:",
+    "28":"POURABLE",
+    "29":"UHCP",
+    "30":"ULTRA HIGH",
+    "31":"PERFORMANCE",
+    "32":"CONCRETE"
   },
   "sr": {
     "menu-0a":"Kompanija",
@@ -55,14 +61,14 @@ let langResourcesArr = {
     "menu-4":"Informacije",
     "menu-5":"Tehnički Listovi",
     "menu-6":"Sertifikati",
-    "menu-7":"Objavljeni Tekstovi",
+    "menu-7":"Objavljeni Članci",
     "menu-8":"GALERIJA",
     "menu-9":"KONTAKT",
     "1":"Proizvod",
     "2":"Sertifikati",
-    "3":"Engleski sertifikati",
-    "4":"Srpski sertifikati",
-    "5":"Radovi",
+    "3":"Svojstva i Izdržljivost",
+    "4":"IMK Izveštaj Br. 402",
+    "5":"Objavljeni Članci",
     "6":"OPIS PROIZVODA",
     "7":"ForteCrete150 spada u specijalnu klasu gusto pakovanih mikroarmiranih betona na bazi čeličnih vlakana, sa optimalnom granulacijom i vrlo niskim vodocementnim faktorom. Odlikuje se izvanrednim čvrstoćama pri pritisku, zatezanju i savijanju, kao i visokim stepenom trajnosti, duktilnosti i postojanosti u hemijski agresivnim sredinama. Projektovan je da ima superiorne mehaničke karakteristike, uključujući i povećanu rezidualnu čvrstoću nakon formiranja prslina. ForteCrete150 je visoko otporan na dejstvo agresivnih hemikalija, abraziju, oštećenja nastala delovanjem soli za odmrzavanje, odnosno cikličnim smrzavanjem-odmrzavanjem, kao i na prodor hlorida i karbonatizaciju.",
     "8":"UPOTREBA",
@@ -84,31 +90,45 @@ let langResourcesArr = {
     "24":"izvanredne mehaničke karakteristike",
     "25":"velika fleksibilnost u projektovanju, unapredjena estetika",
     "26":"Adresa:",
-    "27":"Koordinate:"
+    "27":"Koordinate:",
+    "28":"LIVENI",
+    "29":"UHCP",
+    "30":"BETON",
+    "31":"ULTRA VISOKIH",
+    "32":"PERFORMANSI"
   }
 };
 
-function changeLanguage(clickedLangChoiceId, productsPage) {
+function changeLanguage(clickedLangChoiceId) {
+  sessionStorage.setItem("currentLanguage", clickedLangChoiceId);
   $(function() { 
-      $(".translation").each(function() {
-        let currentlyIteratedTranslationKey = $(this).attr("key");
-        let localizedValForTranslationKey = langResourcesArr[clickedLangChoiceId][currentlyIteratedTranslationKey];
-        $(this).text(localizedValForTranslationKey);
-      });
-      if(productsPage==1){
-        if($(window).width() < 600){
-          if(clickedLangChoiceId == "en"){
-            document.getElementById("fc_products_img_mobile").src = "img/table_eng.jpg";
-          }else{
-            document.getElementById("fc_products_img_mobile").src = "img/table_srb.jpg";
-          }
-        }else{
-          if(clickedLangChoiceId == "en"){
-            document.getElementById("fc_products_img_desktop").src = "img/fc_tests_eng.png";
-          }else{
-            document.getElementById("fc_products_img_desktop").src = "img/fc_tests_srb.png";
-          }
-        }
-      }
+    $(".translation").each(function() {
+      let currentlyIteratedTranslationKey = $(this).attr("key");
+      let localizedValForTranslationKey = langResourcesArr[clickedLangChoiceId][currentlyIteratedTranslationKey];
+      $(this).text(localizedValForTranslationKey);
     });
+  });
+  if (document.getElementById("fc-product-product-info") != null) {
+    if($(window).width() < 600){
+      if(clickedLangChoiceId == "en"){
+        document.getElementById("fc_products_img_mobile").src = "img/table_eng.png";
+      }else{
+        document.getElementById("fc_products_img_mobile").src = "img/table_srb.png";
+      }
+    }else{
+      if(clickedLangChoiceId == "en"){
+        document.getElementById("fc_products_img_desktop").src = "img/fc_tests_eng.png";
+      }else{
+        document.getElementById("fc_products_img_desktop").src = "img/fc_tests_srb.png";
+      }
+
+    }
+  }
+  if (document.getElementById("fc-data-download-link") != null){
+    document.getElementById("fc-data-download-link").href="./data/technical_data/fc150_technical_data_" + sessionStorage.getItem("currentLanguage") + ".pdf";
+  }
+  if (document.getElementById("fc-certs-cert1") != null){
+    document.getElementById("fc-certs-cert1").href="./data/certificates/" + sessionStorage.getItem("currentLanguage") + "_certificate_190.pdf";
+    document.getElementById("fc-certs-cert2").href="./data/certificates/" + sessionStorage.getItem("currentLanguage") + "_report_402.pdf";
+  }
 }
