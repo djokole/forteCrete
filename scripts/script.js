@@ -1,12 +1,4 @@
-$(document).ready(function(){
-  $("#menu_icon").click(function(){
-    $("#fc-content .fc-element.fc-menu-item.fc-text, #fc-content .fc-menu-item").toggle();
-  });
-
-  changeLanguage(sessionStorage.getItem("currentLanguage"));
-  
-});
-let langResourcesArr = {
+var langResourcesArr = {
   "en": {
     "menu-0a":"Company",
     "menu-0":"COMPANY",
@@ -99,26 +91,32 @@ let langResourcesArr = {
   }
 };
 
+$(document).ready(function(){
+  $("#menu_icon").click(function(){
+    $("#fc-content .fc-element.fc-menu-item.fc-text, #fc-content .fc-menu-item").toggle();
+  });
+
+  if (sessionStorage.getItem("currentLanguage") !== "null") {
+    changeLanguage(sessionStorage.getItem("currentLanguage"));
+  }else{
+    changeLanguage("en");
+  }
+
+});
+
 function changeLanguage(clickedLangChoiceId) {
   sessionStorage.setItem("currentLanguage", clickedLangChoiceId);
-  $(function() { 
-    $(".translation").each(function() {
-      let currentlyIteratedTranslationKey = $(this).attr("key");
-      let localizedValForTranslationKey = langResourcesArr[clickedLangChoiceId][currentlyIteratedTranslationKey];
-      $(this).text(localizedValForTranslationKey);
-    });
-  });
   if (document.getElementById("fc-product-product-info") != null) {
     if($(window).width() < 600){
       if(clickedLangChoiceId == "en"){
         document.getElementById("fc_products_img_mobile").src = "img/table_eng.png";
-      }else{
+      }else if(clickedLangChoiceId == "sr"){
         document.getElementById("fc_products_img_mobile").src = "img/table_srb.png";
       }
     }else{
       if(clickedLangChoiceId == "en"){
         document.getElementById("fc_products_img_desktop").src = "img/fc_tests_eng.png";
-      }else{
+      }else if(clickedLangChoiceId == "sr"){
         document.getElementById("fc_products_img_desktop").src = "img/fc_tests_srb.png";
       }
 
@@ -131,4 +129,13 @@ function changeLanguage(clickedLangChoiceId) {
     document.getElementById("fc-certs-cert1").href="./data/certificates/" + sessionStorage.getItem("currentLanguage") + "_certificate_190.pdf";
     document.getElementById("fc-certs-cert2").href="./data/certificates/" + sessionStorage.getItem("currentLanguage") + "_report_402.pdf";
   }
+  $(function() { 
+    $(".translation").each(function() {
+      let currentlyIteratedTranslationKey = $(this).attr("key");
+      if(langResourcesArr[clickedLangChoiceId] != undefined){
+        let localizedValForTranslationKey = langResourcesArr[clickedLangChoiceId][currentlyIteratedTranslationKey];
+        $(this).text(localizedValForTranslationKey);
+      }
+    });
+  });
 }
