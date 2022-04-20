@@ -15,7 +15,7 @@ var langResourcesArr = {
     "2":"Certificates",
     "3":"Properties and Durability",
     "4":"IMK Report No. 402",
-    "5":"Papers",
+    "5":"Published Papers",
     "6":"PRODUCT INFO",
     "7":"ForteCrete150 is a special class of densely packed fiber reinforced composite with optimized granular packing and very low water contetn that offers exceptional strength, durability, ductility, pull-out resistence and long term stability. It is designed to exhibit outstanding mechanical propertires including sustained postcracking tensile strength. ForteCrete150 is non-porous concrete imprevious to water and chemicals. It is highly resistant against acid waters, deicing salt, freeze-thaw deterioration/degradation, chloride ion penetration, chemical attack and carbonation",
     "8":"APPLICATIONS",
@@ -115,8 +115,10 @@ function changeLanguage(clickedLangChoiceId) {
       }
     }else{
       if(clickedLangChoiceId == "en"){
+        document.getElementById("fc_test_preformed").style.marginTop = "43%";
         document.getElementById("fc_products_img_desktop").src = "img/fc_tests_eng.png";
       }else if(clickedLangChoiceId == "sr"){
+        document.getElementById("fc_test_preformed").style.marginTop = "36%";
         document.getElementById("fc_products_img_desktop").src = "img/fc_tests_srb.png";
       }
 
